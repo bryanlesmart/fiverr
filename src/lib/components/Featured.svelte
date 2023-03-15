@@ -6,7 +6,7 @@
 			</h1>
 			<div class="search">
 				<div class="searchInput">
-					<img src="./img/search.png" alt="" />
+					<img src="" alt="" />
 					<input type="text" placeholder="Try building mobil app" />
 				</div>
 				<button>Search</button>
