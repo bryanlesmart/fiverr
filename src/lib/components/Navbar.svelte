@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
+	import { page } from '$app/stores';
 	let active: boolean = false;
 	let modal: boolean = false;
 
@@ -30,7 +30,7 @@
 	}
 </script>
 
-<div class={active ? 'navbar active' : 'navbar'}>
+<div class={active || $page.url.pathname !== '/' ? 'navbar active' : 'navbar'}>
 	<div class="container">
 		<div class="logo">
 			<a href="/" class="link">
@@ -56,7 +56,7 @@
 					{#if modal}
 						<div class="options">
 							{#if currentUser?.isSeller}
-								<span>Gigs</span>
+								<a href="/gigs"><span>Gigs</span></a>
 								<span>Add new Gigs</span>
 							{/if}
 							<span>Orders</span>
@@ -69,12 +69,38 @@
 		</div>
 	</div>
 	<hr />
-	{#if active}
+	{#if active || $page.url.pathname !== '/'}
 		<div class="menu">
-			<span>test</span>
-			<span>test2</span>
+			<a href="/" class="link menu-link">
+				<span>Graphics & Design</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Graphics & Design</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Video & Animation</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Writing & Translation</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>A1 Services</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Digital Marketing</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Music & Audio</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Programming & Tech</span>
+			</a>
+			<a href="/" class="link menu-link">
+				<span>Lifestyle</span>
+			</a>
 		</div>
 	{/if}
+	<hr />
 </div>
 
 <style lang="scss">
@@ -88,7 +114,7 @@
 		transition: 0.5 all ease;
 		position: sticky;
 		top: 0;
-
+		z-index: 999;
 		&.active {
 			background-color: white;
 			color: black;
@@ -113,7 +139,9 @@
 				gap: 24px;
 				font-weight: bold;
 				font-family: 'Montserrat', sans-serif;
-
+				span {
+					white-space: nowrap;
+				}
 				.user {
 					display: flex;
 					align-items: center;
@@ -161,17 +189,20 @@
 		}
 
 		hr {
-			width: 100%;
+			width: calc(100% - 2px);
 			height: 0;
-			border: 0.5px solid rgb(228, 277, 277);
+			border-top: 0.5px solid #ebe9e9;
+			border-bottom: 0.5px solid #ebe9e9;
 		}
 		.menu {
 			width: 1400px;
 			padding: 10px 0px;
-			display: flex;
-			justify-content: space-between;
-			font-weight: 300;
+			display: inline-block;
+			padding: 10px 20px;
+			align-items: center;
+			gap: 10px;
 			color: gray;
+			font-weight: 300;
 			font-family: 'Montserrat', sans-serif;
 		}
 	}
