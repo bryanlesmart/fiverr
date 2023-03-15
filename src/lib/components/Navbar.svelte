@@ -68,8 +68,9 @@
 			{/if}
 		</div>
 	</div>
-	<hr />
+
 	{#if active || $page.url.pathname !== '/'}
+		<hr />
 		<div class="menu">
 			<a href="/" class="link menu-link">
 				<span>Graphics & Design</span>
@@ -99,8 +100,8 @@
 				<span>Lifestyle</span>
 			</a>
 		</div>
+		<hr />
 	{/if}
-	<hr />
 </div>
 
 <style lang="scss">
