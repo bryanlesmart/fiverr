@@ -12,7 +12,7 @@
 			<div class="item">
 				<h1>A whole world of freelance talent at your fingertips</h1>
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="" alt="" />
 					The best for every budget
 				</div>
 				<p>
@@ -20,12 +20,12 @@
 					pricing.
 				</p>
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="" alt="" />
 					Quality work done quickly
 				</div>
 				<p>Find the right freelancer to begin working on your project within minutes.</p>
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="" alt="" />
 					Protected payments, every time
 				</div>
 				<p>
@@ -33,7 +33,7 @@
 					work.
 				</p>
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="" alt="" />
 					24/7 support
 				</div>
 				<p>
@@ -43,7 +43,7 @@
 			</div>
 			<div class="item">
 				<!-- svelte-ignore a11y-media-has-caption -->
-				<video src="./img/video.mp4" controls />
+				<video src="" controls />
 			</div>
 		</div>
 	</div>
@@ -139,7 +139,7 @@
 		<div class="container">
 			<div class="item">
 				<h1>
-					liverr <i>business</i>
+					liver <i>business</i>
 				</h1>
 				<h1>
 					A business solution designed for <i>teams</i>
@@ -161,7 +161,7 @@
 					<img src="./img/check.png" alt="" />
 					Manage teamwork and boost productivity with one powerful workspace
 				</div>
-				<button>Explore Liverr Business</button>
+				<button>Explore Liver Business</button>
 			</div>
 			<div class="item">
 				<img

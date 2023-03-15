@@ -97,7 +97,7 @@ export const projects = [
 		img: 'https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg?auto=compress&cs=tinysrgb&w=1600',
 		pp: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=1600',
 		cat: 'Book Design',
-		username: 'Hannah Dougherty'
+		username: 'Hannah Lopez'
 	},
 	{
 		id: 8,

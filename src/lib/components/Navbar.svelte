@@ -66,8 +66,11 @@
 					{/if}
 				</div>
 			{:else}
-				<a href="/">
-					<button>Join</button>
+				<a href="/register" class="link">
+					<span>Sign in</span>
+				</a>
+				<a href="/login">
+					<button class={active || $page.url.pathname !== '/' ? 'btn-active' : 'btn'}>Join</button>
 				</a>
 			{/if}
 		</div>
@@ -178,7 +181,7 @@
 						color: gray;
 					}
 				}
-				button {
+				.btn {
 					color: white;
 					padding: 10px 20px;
 					border-radius: 5px;
@@ -188,6 +191,20 @@
 					&:hover {
 						background-color: #1dbf73;
 						border-color: #1dbf73;
+					}
+				}
+				.btn-active {
+					background-color: #1dbf73;
+					border-color: #1dbf73;
+					cursor: pointer;
+					color: white;
+					padding: 10px 20px;
+					border-radius: 5px;
+					border: 1px solid white;
+					&:hover {
+						color: black;
+						background-color: transparent;
+						border: 1px solid black;
 					}
 				}
 			}
