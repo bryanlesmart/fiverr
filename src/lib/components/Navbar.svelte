@@ -12,11 +12,13 @@
 		id: number;
 		username: string;
 		isSeller: boolean;
+		islogin: boolean;
 	}
 	const currentUser: CurrentUser = {
 		id: 1,
 		username: 'M',
-		isSeller: true
+		isSeller: true,
+		islogin: false
 	};
 	onMount(() => {
 		window.addEventListener('scroll', isActive);
@@ -42,13 +44,11 @@
 			<span>Fiverr Business</span>
 			<span>Explore</span>
 			<span>English</span>
-			<span>Sign in</span>
-			{#if !currentUser.isSeller}
-				<span>Become a seller</span>
-			{/if}
-			{#if !currentUser}
-				<button>Join</button>
-			{:else}
+			{#if currentUser.islogin}
+				{#if !currentUser.isSeller}
+					<span>Become a seller</span>
+				{/if}
+
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="user" on:click={toggleModal}>
 					<img src="https://picsum.photos/id/237/200/300" alt="/" />
@@ -65,6 +65,10 @@
 						</div>
 					{/if}
 				</div>
+			{:else}
+				<a href="/">
+					<button>Join</button>
+				</a>
 			{/if}
 		</div>
 	</div>
