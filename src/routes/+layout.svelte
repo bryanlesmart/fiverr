@@ -5,5 +5,6 @@
 
 <div class="app">
 	<Navbar />
+
 	<slot />
 </div>
