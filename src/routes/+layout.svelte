@@ -3,7 +3,10 @@
 	import { Navbar, Footer } from '../lib/components';
 </script>
 
-<div>
+<svelte:head>
+	<title>fiverr</title>
+</svelte:head>
+<div class="app">
 	<Navbar />
 	<slot />
 	<Footer />
