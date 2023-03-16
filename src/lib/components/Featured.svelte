@@ -1,3 +1,7 @@
+<script>
+	import { path } from '$lib/data';
+</script>
+
 <div class="featured">
 	<div class="container">
 		<div class="left">
@@ -6,8 +10,8 @@
 			</h1>
 			<div class="search">
 				<div class="searchInput">
-					<img src="" alt="" />
-					<input type="text" placeholder="Try building mobil app" />
+					<img src="{path}search.png" alt="" />
+					<input type="text" name="" id="" placeholder="Search ..." />
 				</div>
 				<button>Search</button>
 			</div>
