@@ -7,7 +7,7 @@
 	<Featured />
 	<TrustedBy />
 	<!-- <Slide {cards} /> -->
-	<h1 style="text-align: center; ">SLIDE</h1>
+	<a href="/gigs" class="link"><h1 style="text-align: center; ">GIGS SLIDE</h1></a>
 	<div class="features">
 		<div class="container">
 			<div class="item">
@@ -172,6 +172,7 @@
 			</div>
 		</div>
 	</div>
+	<h1 style="text-align: center;">ProjectCard</h1>
 </div>
 
 <style lang="scss">

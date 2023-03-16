@@ -5,7 +5,7 @@
 	let modal: boolean = false;
 
 	const isActive = () => {
-		window.scrollY > 0 ? (active = true) : (active = false);
+		window.scrollY > 0 ? !active : active;
 	};
 
 	interface CurrentUser {
@@ -56,7 +56,7 @@
 					{#if modal}
 						<div class="options">
 							{#if currentUser?.isSeller}
-								<a href="/gigs"><span>Gigs</span></a>
+								<a href="/mygigs"><span>Gigs</span></a>
 								<span>Add new Gigs</span>
 							{/if}
 							<span>Orders</span>
