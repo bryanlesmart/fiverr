@@ -56,8 +56,8 @@
 					{#if modal}
 						<div class="options">
 							{#if currentUser?.isSeller}
-								<a href="/mygigs"><span>Gigs</span></a>
-								<span>Add new Gigs</span>
+								<a href="/mygigs" class="link"><span>Gigs</span></a>
+								<a href="/add" class="link"><span>Add new Gigs</span></a>
 							{/if}
 							<span>Orders</span>
 							<span>Message</span>
