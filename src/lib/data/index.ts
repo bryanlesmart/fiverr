@@ -259,5 +259,62 @@ export const gig = [
 		]
 	}
 ];
+
+export const orders = [
+	{
+		id: 1,
+		productImg:
+			'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		username: 'Maria Andres',
+		title: 'Stunning concept art',
+		price: 69,
+		sup: 99
+	},
+	{
+		id: 2,
+		productImg:
+			'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		username: '	Francisco Chang',
+		title: 'Ai generated concept art',
+		price: 59,
+		sup: 99
+	},
+	{
+		id: 3,
+		productImg:
+			'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		username: 'Roland Mendel',
+		title: 'High quality digital character',
+		price: 120,
+		sup: 99
+	},
+	{
+		id: 4,
+		productImg:
+			'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		username: 'Helen Bennett',
+		title: 'Illustration hyper realistic painting',
+		price: 39,
+		sup: 99
+	},
+	{
+		id: 5,
+		productImg:
+			'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		username: '	Michael Green',
+		title: 'Original ai generated digital art',
+		price: 199,
+		sup: 99
+	},
+	{
+		id: 6,
+		productImg:
+			'https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		username: '	Giovanni Rock',
+		title: 'Text based ai generated art',
+		price: 49,
+		sup: 99
+	}
+];
 export const path =
 	'https://raw.githubusercontent.com/safak/youtube23/fullstack-fiverr/client/public/img/';
