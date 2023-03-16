@@ -59,7 +59,9 @@
 								<a href="/mygigs" class="link"><span>Gigs</span></a>
 								<a href="/add" class="link"><span>Add new Gigs</span></a>
 							{/if}
-							<span>Orders</span>
+							<a href="/orders" class="link">
+								<span>Orders</span>
+							</a>
 							<span>Message</span>
 							<span>Logout</span>
 						</div>

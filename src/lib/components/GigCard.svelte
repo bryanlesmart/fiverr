@@ -124,10 +124,10 @@
 					text-align: end;
 				}
 
-				sup {
-					font-size: 12px;
-					font-weight: 300;
-				}
+				// sup {
+				// 	font-size: 12px;
+				// 	font-weight: 300;
+				// }
 			}
 		}
 	}
