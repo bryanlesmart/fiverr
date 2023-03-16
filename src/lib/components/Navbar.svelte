@@ -62,7 +62,7 @@
 							<a href="/orders" class="link">
 								<span>Orders</span>
 							</a>
-							<span>Message</span>
+							<a href="/messages" class="link"><span>Messages</span></a>
 							<span>Logout</span>
 						</div>
 					{/if}
