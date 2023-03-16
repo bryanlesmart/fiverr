@@ -1,7 +1,4 @@
 <script lang="ts">
-	let currentSlide = 0;
-	let slideCount = 0;
-
 	type TCard = {
 		id: number;
 		title: string;
