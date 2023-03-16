@@ -4,5 +4,6 @@ import TrustedBy from './TrustedBy.svelte';
 import Slide from './Slide.svelte';
 import ProjectCard from './ProjectCard.svelte';
 import Footer from './Footer.svelte';
+import GigCard from './GigCard.svelte';
 
-export { Navbar, Featured, TrustedBy, Slide, ProjectCard, Footer };
+export { Navbar, Featured, TrustedBy, Slide, ProjectCard, Footer, GigCard };

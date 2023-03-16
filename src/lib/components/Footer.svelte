@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { path } from '$lib/data';
+</script>
+
 <div class="footer">
 	<div class="container">
 		<div class="top">
@@ -68,21 +72,21 @@
 			</div>
 			<div class="right">
 				<div class="social">
-					<img src="/img/twitter.png" alt="" />
-					<img src="/img/facebook.png" alt="" />
-					<img src="/img/linkedin.png" alt="" />
-					<img src="/img/pinterest.png" alt="" />
-					<img src="/img/instagram.png" alt="" />
+					<img src="{path}twitter.png" alt="" />
+					<img src="{path}facebook.png" alt="" />
+					<img src="{path}linkedin.png" alt="" />
+					<img src="{path}pinterest.png" alt="" />
+					<img src="{path}instagram.png" alt="" />
 				</div>
 				<div class="link">
-					<img src="/img/language.png" alt="" />
+					<img src="{path}language.png" alt="" />
 					<span>English</span>
 				</div>
 				<div class="link">
-					<img src="/img/coin.png" alt="" />
+					<img src="{path}coin.png" alt="" />
 					<span>USD</span>
 				</div>
-				<img src="/img/accessibility.png" alt="" />
+				<img src="{path}accessibility.png" alt="" />
 			</div>
 		</div>
 	</div>

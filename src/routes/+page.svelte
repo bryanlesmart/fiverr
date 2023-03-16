@@ -1,18 +1,19 @@
 <script lang="ts">
 	import { Featured, TrustedBy, Slide, ProjectCard } from '../lib/components';
-	import { cards } from '../lib/data';
+	import { path } from '../lib/data';
 </script>
 
 <div class="home">
 	<Featured />
 	<TrustedBy />
-	<Slide {cards} />
+	<!-- <Slide {cards} /> -->
+	<h1 style="text-align: center; ">SLIDE</h1>
 	<div class="features">
 		<div class="container">
 			<div class="item">
 				<h1>A whole world of freelance talent at your fingertips</h1>
 				<div class="title">
-					<img src="" alt="" />
+					<img src="{path}check.png" alt="" />
 					The best for every budget
 				</div>
 				<p>
@@ -20,12 +21,12 @@
 					pricing.
 				</p>
 				<div class="title">
-					<img src="" alt="" />
+					<img src="{path}check.png" alt="" />
 					Quality work done quickly
 				</div>
 				<p>Find the right freelancer to begin working on your project within minutes.</p>
 				<div class="title">
-					<img src="" alt="" />
+					<img src="{path}check.png" alt="" />
 					Protected payments, every time
 				</div>
 				<p>
@@ -33,7 +34,7 @@
 					work.
 				</p>
 				<div class="title">
-					<img src="" alt="" />
+					<img src="{path}check.png" alt="" />
 					24/7 support
 				</div>
 				<p>
@@ -43,7 +44,7 @@
 			</div>
 			<div class="item">
 				<!-- svelte-ignore a11y-media-has-caption -->
-				<video src="" controls />
+				<video src="{path}video.mp4" controls />
 			</div>
 		</div>
 	</div>
@@ -148,17 +149,17 @@
 					Upgrade to a curated experience packed with tools and benefits, dedicated to businesses
 				</p>
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="{path}check.png" alt="" />
 					Connect to freelancers with proven business experience
 				</div>
 
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="{path}check.png" alt="" />
 					Get matched with the perfect talent by a customer success manager
 				</div>
 
 				<div class="title">
-					<img src="./img/check.png" alt="" />
+					<img src="{path}check.png" alt="" />
 					Manage teamwork and boost productivity with one powerful workspace
 				</div>
 				<button>Explore Liver Business</button>

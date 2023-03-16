@@ -3,7 +3,7 @@
 	import { Navbar, Footer } from '../lib/components';
 </script>
 
-<div class="app">
+<div>
 	<Navbar />
 	<slot />
 	<Footer />
