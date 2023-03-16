@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { Featured, TrustedBy, Slide, ProjectCard } from '../lib/components';
-	import { path } from '../lib/data';
+	import { path, projects, cards } from '../lib/data';
 </script>
 
 <div class="home">
 	<Featured />
 	<TrustedBy />
-	<!-- <Slide {cards} /> -->
-	<a href="/gigs" class="link"><h1 style="text-align: center; ">GIGS SLIDE</h1></a>
+	<Slide {cards} />
 	<div class="features">
 		<div class="container">
 			<div class="item">
@@ -172,7 +171,8 @@
 			</div>
 		</div>
 	</div>
-	<h1 style="text-align: center;">ProjectCard</h1>
+
+	<ProjectCard {projects} />
 </div>
 
 <style lang="scss">

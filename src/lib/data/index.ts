@@ -125,7 +125,7 @@ export const gigs = [
 		desc: 'I will create ultra high quality character art with ai',
 		price: 79,
 		star: 5,
-		username: 'Lannie Coleman'
+		username: 'Camille Coleman'
 	},
 	{
 		id: 3,
@@ -167,21 +167,97 @@ export const gigs = [
 		id: 7,
 		img: 'https://images.pexels.com/photos/6039245/pexels-photo-6039245.jpeg?auto=compress&cs=tinysrgb&w=1600',
 		pp: 'https://images.pexels.com/photos/720606/pexels-photo-720606.jpeg?auto=compress&cs=tinysrgb&w=1600',
-		desc: 'I will generate images with your prompts using ai dalle',
+		desc: 'I will generate images with your prompts using ai generate',
 		price: 89,
 		star: 5,
-		username: 'Waverly Schaefer'
+		username: 'Steve Morgan'
 	},
 	{
 		id: 8,
 		img: 'https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=1600',
 		pp: 'https://images.pexels.com/photos/1699159/pexels-photo-1699159.jpeg?auto=compress&cs=tinysrgb&w=1600',
-		desc: 'I will create custom art using midjourney generator',
+		desc: 'I will create custom art using mid journey generator',
 		price: 110,
 		star: 4,
 		username: 'Wilton Hunt'
 	}
 ];
 
+export const reviews = [
+	{
+		id: 1,
+		username: 'Garner David',
+		img: 'https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		country: 'United States',
+		countryFlag: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png',
+		rating: 5,
+		reviewMessage: [
+			'I just want to say that art_with_ai was the first, and after this, the only artist Ill be',
+			'using on Fiverr. Communication was amazing, each and every day he sent me images that I was',
+			'free to request changes to. They listened, understood, and delivered above and beyond my',
+			'expectations. I absolutely recommend this gig, and know already that Ill be using it again',
+			'very very soon'
+		]
+	},
+	{
+		id: 2,
+		username: 'Sidney Owen',
+		img: 'https://images.pexels.com/photos/4124367/pexels-photo-4124367.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		country: 'Germany',
+		countryFlag: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1e9-1f1ea.png',
+		rating: 5,
+		reviewMessage: [
+			'The designer took my photo for my book cover to the next level! Professionalism and ease of',
+			'working with designer along with punctuality is above industry standards!! Whatever your',
+			'project is, you need this designer!'
+		]
+	},
+	{
+		id: 3,
+		username: 'Lyle Gales',
+		img: 'https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		country: 'United States',
+		countryFlag: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png',
+		rating: 5,
+		reviewMessage: [
+			'Amazing work! Communication was amazing, each and every day he sent me images that I was free',
+			'to request changes to. They listened, understood, and delivered above and beyond my',
+			'expectations. I absolutely recommend this gig, and know already that Ill be using it again',
+			'very very soon'
+		]
+	}
+];
+
+export const gig = [
+	{
+		id: 1,
+		username: 'Anna Bell',
+		userImg:
+			'https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		gigContent: [
+			'I use an AI program to create images based on text prompts. This means I can help you to',
+			'create a vision you have through a textual description of your scene without requiring any',
+			"reference images. Some things I've found it often excels at are: Character portraits (E.g. a",
+			'picture to go with your DnD character) Landscapes (E.g. wallpapers, illustrations to',
+			'compliment a story) Logos (E.g. E sports team, business, profile picture) You can be as',
+			'vague or as descriptive as you want. Being more vague will allow the AI to be more creative',
+			'which can sometimes result in some amazing images. You can also be incredibly precise if you',
+			'have a clear image of what you want in mind. All of the images I create are original and',
+			"will be found nowhere else. If you have any questions you're more than welcome to send me a",
+			'message.'
+		],
+		country: 'USA',
+		rating: 5,
+		memberDate: 'Aug 2022',
+		averageTime: '4 hours',
+		delivery: '1 day',
+		languages: 'English',
+		aboutMe: [
+			'My name is Anna, I enjoy creating AI generated art in my spare time. I have a lot of',
+			'experience using the AI program and that means I know what to prompt the AI with to get',
+			'a great and incredibly detailed result.'
+		]
+	}
+];
 export const path =
 	'https://raw.githubusercontent.com/safak/youtube23/fullstack-fiverr/client/public/img/';
