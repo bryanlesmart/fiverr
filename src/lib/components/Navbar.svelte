@@ -18,7 +18,7 @@
 		id: 1,
 		username: 'M',
 		isSeller: true,
-		islogin: true
+		islogin: false
 	};
 	onMount(() => {
 		window.addEventListener('scroll', isActive);
