@@ -58,7 +58,7 @@
 					{#if modal}
 						<div class="options">
 							{#if $page?.data?.user.isSeller}
-								<a href="/mygigs" class="link" type="button"><span>My Gigs</span></a>
+								<a href="/myGigs" class="link" type="button"><span>My Gigs</span></a>
 								<a href="/add" class="link" type="button"><span>Add new Gigs</span></a>
 							{/if}
 							<a href="/orders" class="link">

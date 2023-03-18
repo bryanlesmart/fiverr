@@ -10,8 +10,29 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Gig {
+  id                String  @id @unique @default(uuid())
+  title             String
+  description       String
+  total_stars       Int?    @default(0)
+  star_num          Int?    @default(0)
+  price             Float   @default(0)
+  image             String?
+  cover_image       String?
+  short_description String?
+  deliverytime      String
+  revision_number   String
+  user              User    @relation(fields: [userId], references: [id])
+  userId            String
+
+  category String
+  features String
+
+  @@map("gigs")
+}
+
 model User {
-  id          String    @id @unique
+  id          String    @id @unique 
   session     Session[]
   Key         Key[]
   username    String    @unique
@@ -21,6 +42,7 @@ model User {
   phone       String
   description String?
   isSeller    Boolean?  @default(false)
+  Gig         Gig[]
 
   @@map("user")
 }
