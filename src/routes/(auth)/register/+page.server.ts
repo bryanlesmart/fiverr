@@ -8,11 +8,7 @@ export const actions: Actions = {
 	default: async ({ request }) => {
 		const { formData, errors } = await validateData(await request.formData(), registerSchema);
 		let isSeller: boolean;
-		// if (formData.isSeller === 'on') {
-		// 	isSeller = false;
-		// }
 		const { username, description, s, password, email, country, phone } = formData;
-		console.log('data:', formData);
 		if (s === 'on') {
 			isSeller = true;
 		} else {
@@ -26,7 +22,7 @@ export const actions: Actions = {
 		}
 
 		try {
-			const user = await auth.createUser({
+			await auth.createUser({
 				primaryKey: {
 					providerId: 'username',
 					providerUserId: username,
@@ -41,8 +37,6 @@ export const actions: Actions = {
 					isSeller
 				}
 			});
-
-			console.log(user);
 		} catch (e) {
 			console.log(e);
 		}

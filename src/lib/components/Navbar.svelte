@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
-	import { invalidateAll } from '$app/navigation';
+	import { goto } from '$app/navigation';
 	let active: boolean = false;
 	let modal: boolean = false;
 
@@ -10,18 +10,6 @@
 		window.scrollY > 0 ? !active : active;
 	};
 
-	interface CurrentUser {
-		id: number;
-		username: string;
-		isSeller: boolean;
-		islogin: boolean;
-	}
-	const currentUser: CurrentUser = {
-		id: 1,
-		username: 'M',
-		isSeller: true,
-		islogin: false
-	};
 	onMount(() => {
 		window.addEventListener('scroll', isActive);
 		return () => {
@@ -31,6 +19,12 @@
 
 	function toggleModal() {
 		modal = !modal;
+		// const form = document.querySelector('.options form') as HTMLFormElement;
+		// if (form) {
+		// 	form.setAttribute('action', '/logout');
+		// 	form.setAttribute('method', 'post');
+		// 	form.submit();
+		// }
 	}
 </script>
 
@@ -46,22 +40,17 @@
 			<span>Fiverr Business</span>
 			<span>Explore</span>
 			<span>English</span>
-			{#if $page.data.user}
-				<form
-					action="/logout"
-					method="post"
-					use:enhance={() => {
-						return async () => {
-							await invalidateAll();
-						};
-					}}
-				>
-					<button type="submit" class="link">logout</button>
-				</form>
+			{#if !$page.data.user}
+				<a href="/register" class="link">
+					<span>Sign in</span>
+				</a>
+				<a href="/login">
+					<button class={active || $page.url.pathname !== '/' ? 'btn-active' : 'btn'}>Join</button>
+				</a>
+			{:else}
 				{#if !$page.data.user.isSeller}
 					<span>Become a seller</span>
 				{/if}
-
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="user" on:click={toggleModal}>
 					<img src="https://picsum.photos/id/237/200/300" alt="/" />
@@ -69,8 +58,8 @@
 					{#if modal}
 						<div class="options">
 							{#if $page?.data?.user.isSeller}
-								<a href="/mygigs" class="link"><span>My Gigs</span></a>
-								<a href="/add" class="link"><span>Add new Gigs</span></a>
+								<a href="/mygigs" class="link" type="button"><span>My Gigs</span></a>
+								<a href="/add" class="link" type="button"><span>Add new Gigs</span></a>
 							{/if}
 							<a href="/orders" class="link">
 								<span>Orders</span>
@@ -79,13 +68,9 @@
 						</div>
 					{/if}
 				</div>
-			{:else}
-				<a href="/register" class="link">
-					<span>Sign in</span>
-				</a>
-				<a href="/login">
-					<button class={active || $page.url.pathname !== '/' ? 'btn-active' : 'btn'}>Join</button>
-				</a>
+				<form action="/logout" method="post">
+					<button class="btn-link link">Logout</button>
+				</form>
 			{/if}
 		</div>
 	</div>
@@ -161,6 +146,16 @@
 				gap: 24px;
 				font-weight: bold;
 				font-family: 'Montserrat', sans-serif;
+
+				.btn-link {
+					background: none;
+					border: none;
+					padding: 0;
+					font: inherit;
+					text-decoration: none;
+
+					cursor: pointer;
+				}
 				span {
 					white-space: nowrap;
 				}

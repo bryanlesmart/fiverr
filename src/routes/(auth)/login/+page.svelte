@@ -1,6 +1,18 @@
+<script lang="ts">
+	import { space } from 'svelte/internal';
+	import type { ActionData } from './$types';
+
+	export let form: ActionData;
+</script>
+
+<pre>{JSON.stringify(form?.errors, null, 2)}</pre>
+
 <div class="login">
 	<form action="?/login" method="post">
 		<h1>Sign in</h1>
+		{#if form?.credentials}
+			<span class="error">Invalid credentials</span>
+		{/if}
 		<label for="username">Username</label>
 		<input name="username" type="text" placeholder="johndoe" />
 
@@ -23,6 +35,15 @@
 			flex-direction: column;
 			gap: 20px;
 
+			.error {
+				border: none;
+				text-align: center;
+				padding: 20px;
+				color: white;
+				font-weight: 500;
+				font-size: 18px;
+				background-color: red;
+			}
 			h1 {
 				color: gray;
 				margin-bottom: 20px;
