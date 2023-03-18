@@ -1,15 +1,26 @@
+<script lang="ts">
+	import type { ActionData } from './$types';
+
+	let isSeller: boolean = false;
+
+	export let form: ActionData;
+</script>
+
+<pre>{JSON.stringify(form?.errors, null, 2)}</pre>
+
 <div class="register">
-	<form>
+	<form method="post">
 		<div class="left">
 			<h1>Create a new account</h1>
 			<label for="username">Username</label>
 			<input name="username" type="text" placeholder="johndoe" />
+
 			<label for="email">Email</label>
 			<input name="email" type="email" placeholder="email" />
 			<label for="password">Password</label>
 			<input name="password" type="password" />
-			<label for="file">Profile Picture</label>
-			<input type="file" />
+			<!-- <label for="file">Profile Picture</label>
+			<input type="file" /> -->
 			<label for="country">Country</label>
 			<input name="country" type="text" placeholder="Usa" />
 			<button type="submit">Register</button>
@@ -18,8 +29,9 @@
 			<h1>I want to become a seller</h1>
 			<div class="toggle">
 				<label for="">Activate the seller account</label>
+				<!-- <input type="checkbox" name="isSeller" bind:checked={isSeller} id="" /> -->
 				<label class="switch">
-					<input type="checkbox" />
+					<input type="checkbox" name="s" />
 					<span class="slider round" />
 				</label>
 			</div>
@@ -28,7 +40,7 @@
 			<label for="">Description</label>
 			<textarea
 				placeholder="A short description of yourself"
-				name="desc"
+				name="description"
 				id=""
 				cols="30"
 				rows="10"

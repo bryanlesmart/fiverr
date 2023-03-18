@@ -1,5 +1,5 @@
 <div class="login">
-	<form>
+	<form action="?/login" method="post">
 		<h1>Sign in</h1>
 		<label for="username">Username</label>
 		<input name="username" type="text" placeholder="johndoe" />

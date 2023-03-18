@@ -1,4 +1,4 @@
-import { lucia } from 'lucia-auth/auth';
+import lucia from 'lucia-auth';
 import prismaAdapter from '@lucia-auth/adapter-prisma';
 import { dev } from '$app/environment';
 import { prisma } from './prisma';
@@ -8,10 +8,12 @@ export const auth = lucia({
 	env: dev ? 'DEV' : 'PROD',
 	transformUserData: (userData) => {
 		return {
-			userId: userData.id,
 			email: userData.email,
 			username: userData.username,
-			isSeller: userData.isSeller
+			isSeller: userData.isSeller,
+			country: userData.country,
+			description: userData.description,
+			phone: userData.phone
 		};
 	}
 });

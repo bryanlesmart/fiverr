@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import { enhance } from '$app/forms';
+	import { invalidateAll } from '$app/navigation';
 	let active: boolean = false;
 	let modal: boolean = false;
 
@@ -44,18 +46,29 @@
 			<span>Fiverr Business</span>
 			<span>Explore</span>
 			<span>English</span>
-			{#if currentUser.islogin}
-				{#if !currentUser.isSeller}
+			{#if $page.data.user}
+				<form
+					action="/logout"
+					method="post"
+					use:enhance={() => {
+						return async () => {
+							await invalidateAll();
+						};
+					}}
+				>
+					<button type="submit" class="link">logout</button>
+				</form>
+				{#if !$page.data.user.isSeller}
 					<span>Become a seller</span>
 				{/if}
 
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="user" on:click={toggleModal}>
 					<img src="https://picsum.photos/id/237/200/300" alt="/" />
-					<span>{currentUser?.username}</span>
+					<span>{$page?.data?.user?.username}</span>
 					{#if modal}
 						<div class="options">
-							{#if currentUser?.isSeller}
+							{#if $page?.data?.user.isSeller}
 								<a href="/mygigs" class="link"><span>My Gigs</span></a>
 								<a href="/add" class="link"><span>Add new Gigs</span></a>
 							{/if}
@@ -63,7 +76,6 @@
 								<span>Orders</span>
 							</a>
 							<a href="/messages" class="link"><span>Messages</span></a>
-							<span>Logout</span>
 						</div>
 					{/if}
 				</div>
